@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Tabuyos</title>
+    </head>
+    <body>
+        <div id="container">This page</div>
+        <button id="btn">Click Me</button>
+    </body>
+    <!-- <script src="parser/Parser.js"></script> -->
+    <script>
+     document.write('<script src="parser/Parser.js" type="text/javascript" ></sc' + 'ript>');
+     document.getElementById("btn").onclick = function() {
+         Parser.load()
+     };
+    </script>
+</html>
