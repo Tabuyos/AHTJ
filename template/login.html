@@ -1,19 +1,19 @@
-<html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <title>template</title>
-    </head>
-    <body>
-        <form id="form" method="post">
-            <input type="text" value="username" placeholder="inpyt user's username" />
-            <input type="password" value="password" placeholder="inpyt user's password" />
-            <input type="submit" value="Click Me" />
-        </form>
-    </body>
-</html>
+<ahtj>
+    <form id="form" method="post">
+        <input type="text" value="username" placeholder="inpyt user's username" />
+        <input type="password" value="password" placeholder="inpyt user's password" />
+        <input type="button" id="button" value="Click Me Two" />
+    </form>
+</ahtj>
+
+<style>
+ #button {
+     background-color: blue;
+ }
+</style>
 
 <script>
- document.getElementById("form").onclick = function() { load() }
+ document.getElementById("button").onclick = function() { load() }
  function load(){
      console.log("Inner funtion loaded.");
  }
