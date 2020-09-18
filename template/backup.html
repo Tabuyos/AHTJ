@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Tabuyos</title>
+    </head>
+    <body>
+        <div id="container">This page will dispear.</div>
+        {{content}}
+        <button id="btn">Click Me One</button>
+    </body>
+
+    <style type="text/css" media="screen">
+     #container {
+         background-color: red;
+     }
+     #btn {
+         background-color: green;
+     }
+    </style>
+
+    <!-- <script src="parser/Parser.js"></script> -->
+    <script id="AHTJ">
+     function myFunction () {
+         console.log("beforeunload");
+         Parser.loadHtml();
+     }
+     window.addEventListener("beforeunload", function () {
+         Parser.loadHtml();
+     })
+     /* window.addEventListener("load", function () {
+      *     Parser.loadHtml();
+      *     document.getElementById("btn").onclick = function() {
+      *     Parser.load();
+      *     };
+      * }) */
+     document.write('<script src="parser/Parser.js" type="text/javascript" ></sc' + 'ript>');
+     document.getElementById("btn").onclick = function() {
+         Parser.load();
+     };
+    </script>
+</html>
